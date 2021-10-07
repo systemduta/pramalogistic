@@ -52,6 +52,13 @@
                         <li><a href="{{ route('berita') }}">Data Berita</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
+                            class="mdi mdi-cash-multiple"></i><span class="hide-menu">Tarif</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="{{ route('shipping_rates.index') }}">Data Tarif</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

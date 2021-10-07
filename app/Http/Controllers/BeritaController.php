@@ -29,7 +29,7 @@ class BeritaController extends Controller
                 "nama" => 'required',
                 "gambar" => 'required|mimes:png,jpg|max:2048',
                 "deskripsi" => 'required|string',
-            ],
+            ]
         );
 
         $post = new Berita();
