@@ -31,7 +31,7 @@
     <!-- Main Wraapper -->
     <div class="main_wrapper">
         <!-- Header Start -->
-        <header id="header">
+        <header id="header" class="fixed-top">
             @include('temp.header')
         </header>
         @yield('content')

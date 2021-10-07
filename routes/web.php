@@ -17,16 +17,16 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('lang/{language}', 'LocalizationController@switch')->name('localization.switch');
 Route::get('/', 'BerandaController@index');
-Route::get('/tentang_kami', 'TentangController@index');
-Route::get('/karir', 'KarirController@index');
-Route::get('/berita', 'BeritaController@index');
-Route::get('/pesan', 'PesanController@index');
-Route::get('/karir/daftar', 'KarirController@daftar')->name('karir');
-Route::post('/karir/daftar', 'KarirController@pelamar')->name('pelamar');
+Route::get('/about_us', 'TentangController@index');
+Route::get('/career', 'KarirController@index');
+Route::get('/news', 'BeritaController@index');
+Route::get('/order', 'PesanController@index');
+Route::get('/career/daftar', 'KarirController@daftar')->name('karir');
+Route::post('/career/daftar', 'KarirController@pelamar')->name('pelamar');
 
 // Route::get('/', 'FrontendController@index')->name('welcome');
 
-Auth::routes(['verify' => true]);
+Auth::routes(['verify' => true, 'register'=>false]);
 
 Route::middleware('auth')->group(function () {
 
