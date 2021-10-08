@@ -71,7 +71,7 @@ class ShippingRateController extends Controller
         $rate->noted = $request->noted;
         $rate->save();
 
-        return response()->redirectToRoute('shipping_rates.index');
+        return response()->redirectToRoute('admin.shipping_rates');
     }
 
     /**
@@ -120,7 +120,7 @@ class ShippingRateController extends Controller
         $shippingRate->noted = $request->noted;
         $shippingRate->save();
 
-        return response()->redirectToRoute('shipping_rates.index');
+        return response()->redirectToRoute('admin.shipping_rates');
     }
 
     /**
@@ -132,6 +132,6 @@ class ShippingRateController extends Controller
     public function destroy(ShippingRate $shippingRate)
     {
         $shippingRate->delete();
-        return response()->redirectToRoute('shipping_rates.index');
+        return response()->redirectToRoute('admin.shipping_rates');
     }
 }

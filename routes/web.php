@@ -15,22 +15,22 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('storage_links', function () {
-    try {
-        \Illuminate\Support\Facades\Artisan::call('storage:link');
-        dd("Success to storage link");
-    } catch (Exception $exception){
-        throw $exception;
-    }
-});
-Route::get('migrate', function () {
-    try {
-        \Illuminate\Support\Facades\Artisan::call('migrate');
-        dd("Success to migrate");
-    } catch (Exception $exception){
-        throw $exception;
-    }
-});
+//Route::get('storage_links', function () {
+//    try {
+//        \Illuminate\Support\Facades\Artisan::call('storage:link');
+//        dd("Success to storage link");
+//    } catch (Exception $exception){
+//        throw $exception;
+//    }
+//});
+//Route::get('migrate', function () {
+//    try {
+//        \Illuminate\Support\Facades\Artisan::call('migrate');
+//        dd("Success to migrate");
+//    } catch (Exception $exception){
+//        throw $exception;
+//    }
+//});
 
 
 Route::get('lang/{language}', 'LocalizationController@switch')->name('localization.switch');
