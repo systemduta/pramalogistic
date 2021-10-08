@@ -35,9 +35,10 @@ class BeritaController extends Controller
         $post = new Berita();
 
         if ($request->has("gambar")) {
-            $imageName = Str::uuid();
+            $file = $request->file("gambar");
+            $imageName = Str::uuid().'.'.$file->getClientOriginalExtension();
             $post->gambar = $imageName;
-            ImageController::berita($request->file("gambar"), $imageName);
+            ImageController::berita($file, $imageName);
         }
 
         $post->nama = $request->nama;

@@ -21,7 +21,9 @@
                             <a href="#{{ $item->id }}"><button onclick="syarat(event, '{{ $item->id }}')"
                                     class="tablinks btn-lwn" type="button">{{ __('bahasa.selengkapnya') }}</button></a>
                         </div>
-                        <img class="lwn-image" src="{{ asset('storage/lowongan/' . $item->gambar) }}">
+                        @if($item->gambar)
+                        <img class="lwn-image" src="{{ asset('storage/berita/' . $item->gambar) }}">
+                        @endif
                     </div>
                 @endforeach
             </div>

@@ -2,8 +2,8 @@
 return
 [
     'tentang kami' => 'About Us',
-    'tentang kami 1' => 'Departing From', 
-    'tentang kami 2' => 'Customer Trust', 
+    'tentang kami 1' => 'Departing From',
+    'tentang kami 2' => 'Customer Trust',
     'tentang kami 3' => 'Against Our Integrity',
     'profil' => 'PROFILE',
     'profil 1' => 'Established in 2017 as PT Prama Madya Parama which is known as a trusted fleet for many years as a distributor of ice block fleets. Due to the satisfaction of business partners with our services, there are more and more requests as logistics and finally Prama was established in 2017. The more development of Prama is due to the loyalty of partners who are satisfied with our management and services. The presence of Prama Logistik to knit cities and knit islands in Indonesia.',
@@ -50,8 +50,9 @@ return
     'visi 1' => 'To be a competitive transportation company with priority on customer satisfaction',
     'misi 1' => 'Integrating freight forwarding services in one innovative and reliable technology system by living out the company is noble values in brotherly love',
     'percayakan barang' => ' TRUST YOUR GOODS AND LOGISTICS TO US',
-    'kantor kami' => 'OUR OFFICE',     
-    'legalitas dan perijinan' => 'Legality & Licensing'
+    'kantor kami' => 'OUR OFFICE',
+    'legalitas dan perijinan' => 'Legality & Licensing',
+    'tarif' => 'Shipping Rates'
 ];
 
 ?>

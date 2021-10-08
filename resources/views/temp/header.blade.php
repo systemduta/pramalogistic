@@ -8,6 +8,9 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
+                <li class="{{ request()->is('shipping_rates') ? 'active' : '' }}">
+                    <a href="{{ url('/shipping_rates') }}">{{ __('bahasa.tarif') }}</a>
+                </li>
                 <li class="{{ request()->is('about_us') ? 'active' : '' }}">
                     <a href="{{ url('/about_us') }}">{{ __('bahasa.tentang kami') }}</a>
                 </li>

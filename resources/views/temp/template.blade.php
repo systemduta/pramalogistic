@@ -24,6 +24,7 @@
     <!-- Template Main CSS File -->
     <link href="{{ url('assets/css/style.css') }}" rel="stylesheet">
     <link href="{{ url('assets/css/floating-wpp.css') }}" rel="stylesheet">
+    @stack('add_header')
 </head>
 
 <body>
@@ -61,6 +62,7 @@
 <script src="{{ url('assets/js/main.js') }}"></script>
 <script src="{{ url('assets/js/floating-wpp.js') }}"></script>
 <script src="{{ url('assets/js/pesan.js') }}"></script>
+@stack('add_footer')
 <script>
     $('.floating-wpp').floatingWhatsApp({
 

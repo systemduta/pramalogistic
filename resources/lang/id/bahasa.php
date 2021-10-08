@@ -2,8 +2,8 @@
 return
 [
     'tentang kami' => 'Tentang Kami',
-    'tentang kami 1' => 'Berangkat Dari', 
-    'tentang kami 2' => 'Kepercayaan Pelanggan', 
+    'tentang kami 1' => 'Berangkat Dari',
+    'tentang kami 2' => 'Kepercayaan Pelanggan',
     'tentang kami 3' => 'Terhadap Integritas Kami',
     'profil' => 'PROFIL',
     'profil 1' => 'Berdiri pada tahun 2017 sebagai PT Prama Madya Parama yang sbeelumnya dikenal sebagai armada yang terpercaya bertahun-tahun sebagai armada distributor es balok. Karena kepuasan mitra bisnis terhadap layanan kami maka semakin banyak permintaan sebagai logistic dan akhirnya prama berdiri pada tahun 2017. Semakin berkembangnya prama karena loyalitas mitra yang puas dengan manajemen dan pelayanan kami. Hadirnya Prama Logistik untuk merajut kota dan merajit pulau di Indonesia.',
@@ -51,7 +51,8 @@ return
     'misi 1' => 'Mengintegrasikan jasa pengiriman barang dalam satu sistem teknologi yang inovatif dan selalu dapat diandalkan dengan menghidupi nilai nilai luhur perusahaan dalam kasih persaudaraan',
     'percayakan barang' => ' PERCAYAKAN BARANG DAN LOGISTIK ANDA KEPADA KAMI',
     'kantor kami' => 'KANTOR KAMI',
-    'legalitas dan perijinan' => 'Legalitas & Perijinan'
+    'legalitas dan perijinan' => 'Legalitas & Perijinan',
+    'tarif' => 'Tarif'
 ];
 
 ?>

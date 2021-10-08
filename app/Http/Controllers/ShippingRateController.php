@@ -16,18 +16,25 @@ class ShippingRateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function admin_index()
+    {
+        $rate = ShippingRate::all();
+        return response()->view('admin.shipping_rates', [
+            'data' => $rate
+        ]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $rate = ShippingRate::all();
-        if (auth()->user()) {
-            return response()->view('admin.shipping_rates', [
-                'data' => $rate
-            ]);
-        } else {
-            return response()->view('shipping_rates', [
-                'data' => $rate
-            ]);
-        }
+        return response()->view('shipping_rates', [
+            'data' => $rate
+        ]);
     }
 
     /**

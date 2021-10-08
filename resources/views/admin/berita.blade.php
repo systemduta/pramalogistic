@@ -66,7 +66,7 @@
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                     <img
-                        src="{{ $item->gambar ? asset('storage/berita/' . $item->gambar) : asset('dist/img/logo_bg.png') }}">
+                        src="{{ $item->gambar ? asset('storage/berita/' . $item->gambar) : asset('assets/img/default/no-image.jpg') }}">
                 </div>
             </div>
         </div>

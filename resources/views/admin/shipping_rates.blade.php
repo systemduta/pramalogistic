@@ -42,7 +42,7 @@
                                 <td>{{ ++$n }}</td>
                                 <td>{{ $item->origin }}</td>
                                 <td>{{ $item->destination }}</td>
-                                <td>{{ $item->price }}</td>
+                                <td>{{ number_format($item->price, 0, null, '.') }}</td>
                                 <td>{{ $item->estimation }}</td>
                                 <td>
                                     <a type="button" class="btn btn-small btn-outline-info" data-toggle="modal" data-target="#detail-{{ $item->id }}">
@@ -90,7 +90,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h5>Tarif</h5>
-                                <p>{{$item->price}}</p>
+                                <p>{{number_format($item->price, 0, null, '.')}}</p>
                             </div>
                             <div class="col-md-6">
                                 <h5>Estimasi</h5>

@@ -48,4 +48,6 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/admin/berita', 'BeritaController@berita')->name('berita');
     Route::post('/admin/berita', 'BeritaController@store')->name('store.berita');
+
+    Route::get('/admin/shipping_rates', 'ShippingRateController@admin_index')->name('admin.shipping_rates');
 });

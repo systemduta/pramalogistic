@@ -56,7 +56,7 @@
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
                             class="mdi mdi-cash-multiple"></i><span class="hide-menu">Tarif</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="{{ route('shipping_rates.index') }}">Data Tarif</a></li>
+                        <li><a href="{{ route('admin.shipping_rates') }}">Data Tarif</a></li>
                     </ul>
                 </li>
             </ul>
