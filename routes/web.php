@@ -15,6 +15,15 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+Route::get('storage_links', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('storage:link');
+        dd("Success to storage link");
+    } catch (Exception $exception){
+        throw $exception;
+    }
+});
+
 Route::get('lang/{language}', 'LocalizationController@switch')->name('localization.switch');
 Route::get('/', 'BerandaController@index');
 Route::get('/about_us', 'TentangController@index');
