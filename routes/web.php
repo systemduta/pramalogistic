@@ -23,6 +23,15 @@ Route::get('storage_links', function () {
         throw $exception;
     }
 });
+Route::get('migrate', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate');
+        dd("Success to migrate");
+    } catch (Exception $exception){
+        throw $exception;
+    }
+});
+
 
 Route::get('lang/{language}', 'LocalizationController@switch')->name('localization.switch');
 Route::get('/', 'BerandaController@index');
