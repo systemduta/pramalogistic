@@ -24,6 +24,8 @@
     <!-- Template Main CSS File -->
     <link href="{{ url('assets/css/style.css') }}" rel="stylesheet">
     <link href="{{ url('assets/css/floating-wpp.css') }}" rel="stylesheet">
+
+    <script src="{{ url('assets/vendor/jquery/jquery.min.js') }}"></script>
     @stack('add_header')
 </head>
 
@@ -47,7 +49,7 @@
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 </body>
 <!-- Vendor JS Files -->
-<script src="{{ url('assets/vendor/jquery/jquery.min.js') }}"></script>
+
 <script src="{{ url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ url('assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
 <script src="{{ url('assets/vendor/php-email-form/validate.js') }}"></script>

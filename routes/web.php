@@ -41,6 +41,7 @@ Route::get('/news', 'BeritaController@index');
 Route::get('/order', 'PesanController@index');
 Route::get('/career/daftar', 'KarirController@daftar')->name('karir');
 Route::post('/career/daftar', 'KarirController@pelamar')->name('pelamar');
+Route::get('shipping_rates/search', 'ShippingRateController@search')->name('shipping_rates.name');
 Route::resource('shipping_rates', 'ShippingRateController');
 
 // Route::get('/', 'FrontendController@index')->name('welcome');

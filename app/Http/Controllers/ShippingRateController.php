@@ -11,6 +11,42 @@ class ShippingRateController extends Controller
     {
         $this->middleware('auth')->except(['index']);
     }
+
+    public function search(Request $request)
+    {
+        $request->validate([
+            'search'=>'required|string|max:20',
+            'type'=>'required|string|max:20',
+        ]);
+
+        $search = ShippingRate::query()
+            ->when($request->type == 'origin', function ($q) use ($request) {
+                return $q->where('origin', 'like', '%'.$request->search.'%');
+            })
+            ->when($request->type == 'destination', function ($q) use ($request) {
+                return $q->where('destination', 'like', '%'.$request->search.'%');
+            })->get();
+
+        if ($request->type=='origin' && $search) {
+            $search = $search->map(function ($item, $key){
+                return [
+                    'id' => $item->id,
+                    'text' => $item->origin
+                ];
+            })->unique('text');
+        }
+
+        if ($request->type=='destination' && $search) {
+            $search = $search->map(function ($item, $key){
+                return [
+                    'id' => $item->id,
+                    'text' => $item->destination
+                ];
+            })->unique('text');
+        }
+
+        return response()->json($search);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -29,9 +65,16 @@ class ShippingRateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $rate = ShippingRate::all();
+        $request->validate([
+            'origin'=>'string|max:20',
+            'destination'=>'string|max:20',
+        ]);
+        $rate = ShippingRate::query()
+            ->where('origin', 'like', '%'.$request->origin.'%')
+            ->where('destination', 'like', '%'.$request->destination.'%')
+            ->get();
         return response()->view('shipping_rates', [
             'data' => $rate
         ]);
