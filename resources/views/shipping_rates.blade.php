@@ -144,11 +144,15 @@
             });
 
         //    default value
+            @if(request()->get('origin'))
             let default_origin = $("<option selected='selected'></option>").val("1").text("{{request()->get('origin')}}");
             $("#select2_origin").append(default_origin).trigger('change');
+            @endif
 
+            @if(request()->get('destination'))
             let default_destination = $("<option selected='selected'></option>").val("1").text("{{request()->get('destination')}}");
             $("#select2_destination").append(default_destination).trigger('change');
+            @endif
         });
     </script>
 {{--    <script src="{{ url('assets/vendor/datatables/jquery.dataTables.min.js') }}"></script>--}}
