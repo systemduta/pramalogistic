@@ -35,7 +35,7 @@
                                 <div class="row">
                                     <div class="col-md-4"><h5 class="card-title d-flex justify-content-md-between">{{$d->origin}}<i class='bx bxs-right-arrow-alt'></i></h5></div>
                                     <div class="col-md-4"><h5 class="card-title">{{$d->destination}}</h5></div>
-                                    <div class="col-md-4"><h5 class="card-title" style="color: #FE3F00">Rp {{number_format($d->price, 0,null,'.')}}</h5></div>
+                                    <div class="col-md-4"><h5 class="card-title" style="color: #FE3F00">{{$d->price}}</h5></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 card-text">{{$d->estimation}}</div>

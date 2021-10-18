@@ -104,7 +104,7 @@ class ShippingRateController extends Controller
         $request->validate([
             'origin'=>'required|string|max:255',
             'destination'=>'required|string|max:255',
-            'price'=>'required|numeric',
+            'price'=>'required|string|max:255',
             'estimation'=>'string|max:255|nullable',
             'noted'=>'string|nullable',
         ]);

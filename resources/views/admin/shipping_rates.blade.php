@@ -42,7 +42,7 @@
                                 <td>{{ ++$n }}</td>
                                 <td>{{ $item->origin }}</td>
                                 <td>{{ $item->destination }}</td>
-                                <td>{{ number_format($item->price, 0, null, '.') }}</td>
+                                <td>{{ $item->price }}</td>
                                 <td>{{ $item->estimation }}</td>
                                 <td>
                                     <a type="button" class="btn btn-small btn-outline-info" data-toggle="modal" data-target="#detail-{{ $item->id }}">
@@ -90,7 +90,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h5>Tarif</h5>
-                                <p>{{number_format($item->price, 0, null, '.')}}</p>
+                                <p>{{$item->price}}</p>
                             </div>
                             <div class="col-md-6">
                                 <h5>Estimasi</h5>
@@ -129,7 +129,8 @@
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="control-label">Tarif:</label>
-                            <input type="number" class="form-control" id="form_price" name="price" required>
+                            <input type="text" class="form-control" id="form_price" name="price" required>
+                            <small class="form-text text-muted">Contoh Penulisan: Rp 500.000 - Rp 1.000.000</small>
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="control-label">Estimasi:</label>
