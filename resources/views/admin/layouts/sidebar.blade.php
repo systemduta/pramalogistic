@@ -10,7 +10,11 @@
             </div>
             <!-- User profile text-->
             <div class="profile-text">
-                <h5>{{ Auth::user()->name }}</h5>
+                <h5>{{ Auth::user()->name }}&nbsp;
+                    <a href="javascript:void(0)" title="Update Profile" data-toggle="modal" data-target="#update_profile_modal">
+                        <i class="fa fa-gear"></i>
+                    </a>
+                </h5>
                 <a href="{{ route('logout') }}"
                     onclick="event.preventDefault();document.getElementById('logout-form').submit();" class=""
                     data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
@@ -65,3 +69,51 @@
     </div>
     <!-- End Sidebar scroll-->
 </aside>
+
+<div class="modal fade" id="update_profile_modal" tabindex="-1" role="dialog"
+     aria-labelledby="updateProfileModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" action="{{route('update_profile', [auth()->user()->id])}}">
+                @csrf
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel1">Update Profile</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label">Name:</label>
+                    <input type="text" class="form-control" name="name" value="{{auth()->user()->name}}">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Email:</label>
+                    <input type="text" class="form-control" name="email">
+                    <small class="form-text text-muted">Kosongkan jika tidak ingin merubah email</small>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Password:</label>
+                    <input type="text" class="form-control" name="password">
+                    <small class="form-text text-muted">Kosongkan jika tidak ingin merubah password</small>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Company Name:</label>
+                    <input type="text" class="form-control" name="company_name" value="{{auth()->user()->company_name}}">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Company WhatsApp:</label>
+                    <input type="text" class="form-control" name="company_wa" value="{{auth()->user()->company_wa}}">
+                    <small class="form-text text-muted">Format penulisan: 6285855558835</small>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Company Address:</label>
+                    <textarea class="form-control" id="form_noted" name="company_address">{{auth()->user()->company_address}}</textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" name="_method" value="PUT" class="btn btn-warning">Update</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

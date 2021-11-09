@@ -144,7 +144,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
                         <button type="submit" class="btn btn-primary" id="btn_save">Simpan</button>
-                        <button type="submit" name="_method" value="PUT" class="btn btn-success" id="btn_update">Perbaharui</button>
+                        <button type="submit" name="_method" value="PUT" class="btn btn-success">Perbaharui</button>
                     </div>
                 </div>
             </div>

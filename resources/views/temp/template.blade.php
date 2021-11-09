@@ -28,7 +28,9 @@
     <script src="{{ url('assets/vendor/jquery/jquery.min.js') }}"></script>
     @stack('add_header')
 </head>
-
+@php
+    $company_wa = \Illuminate\Support\Facades\DB::table('users')->first()->company_wa;
+@endphp
 <body>
     <!-- Preloader Box -->
     <!-- Main Wraapper -->
@@ -69,7 +71,7 @@
     $('.floating-wpp').floatingWhatsApp({
 
         // phone number
-        phone: '+6282228686427',
+        phone: '{{$company_wa}}',
 
         // message to send
         message: '',

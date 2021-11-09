@@ -51,6 +51,7 @@ Auth::routes(['verify' => true, 'register'=>false]);
 Route::middleware('auth')->group(function () {
 
     Route::get('/admin/home', 'HomeController@index')->name('dashboard');
+    Route::put('/admin/update_profile/{id}', 'UserController@update')->name('update_profile');
 
     //Karir
     Route::get('/admin/Lowongan', 'LowonganController@index')->name('lowongan');

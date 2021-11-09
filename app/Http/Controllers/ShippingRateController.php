@@ -71,12 +71,13 @@ class ShippingRateController extends Controller
             'origin'=>'string|max:20',
             'destination'=>'string|max:20',
         ]);
-        if (!$request->origin && !$request->destination) return response()->view('shipping_rates', [
-            'data' => collect([])
-        ]);
         $rate = ShippingRate::query()
-            ->where('origin', 'like', '%'.$request->origin.'%')
-            ->where('destination', 'like', '%'.$request->destination.'%')
+            ->when($request->has('origin'), function ($q) use ($request){
+                return $q->where('origin', 'like', '%'.$request->origin.'%');
+            })
+            ->when($request->has('destination'), function ($q) use ($request){
+                return $q->where('destination', 'like', '%'.$request->destination.'%');
+            })
             ->get();
         return response()->view('shipping_rates', [
             'data' => $rate
